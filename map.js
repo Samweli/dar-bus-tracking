@@ -11,26 +11,24 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 }).addTo(map);
 
 
-
-// Show bus routes
 var busRouteFeatures = busRoutes.features;
 var busRoutesFeatureGroup = L.featureGroup().addTo(map);
 
 var busIconGreen = L.icon({
     iconUrl: 'img/minibus_green.svg',
-    iconSize: [20, 20], // size of the icon
+    iconSize: [20, 20],
 });
 
 var busIconOrange = L.icon({
     iconUrl: 'img/minibus_orange.svg',
-    iconSize: [20, 20], // size of the icon
+    iconSize: [20, 20],
 });
 
 var count = 0;
 
 function addRoute(feature) {
     var polyline = L.polyline([], {
-        color: "#3282c4",
+        color: "#105691",
         weight: 2,
         opacity: 0.8
     }).addTo(busRoutesFeatureGroup);
@@ -54,7 +52,7 @@ function addRoute(feature) {
         busMarker.setLatLng(point);
         if (j == 15) {
             busMarker.setIcon(busIconGreen);
-            $(".route-count").css("color", "#3282c4");
+            $(".route-count").css("color", "#105691");
         }
 
         polyline.addLatLng(point);
