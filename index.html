@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset=utf-8 />
+    <title>Bringing ally to Dar es Salaam</title>
+    <link rel='shortcut icon' href='http://www.allyapp.com/wp-content/uploads/2015/04/favIcon2.png' type='image/x-icon' />
+    <script src="jquery-1.11.3.min.js"></script>
+    <script src='https://api.mapbox.com/mapbox.js/v2.2.1/mapbox.js'></script>
+    <link href='https://api.mapbox.com/mapbox.js/v2.2.1/mapbox.css' rel='stylesheet' />
+    <link href='base.css' rel='stylesheet' />
+    <link href='site.css' rel='stylesheet' />
+</head>
+
+<body class='fill-darkblue intro'>
+    <!-- Opening Modal -->
+    <section class='modal'>
+        <div class='modal-content'>
+            <div class='limiter pad8y clearfix'>
+                <div class='col8 margin2 dark pad4y'>
+                    <div class='prose space-bottom2 center'>
+                        <a href='http://www.allyapp.com'><img class="ally-header" src='img/ally_logo.svg'></a>
+                        <h1>Bringing ally to Dar es Salaam</h1>
+                        <p class='description'>Within just a few weeks over 200 Dala Dala routes were tracked by local volunteers.</p>
+                    </div>
+                    <div class='col12 space-bottom4 clearfix center'>
+                        <a href='#' class='js-explore button button-keyline animate dark'>Explore</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Map visualization -->
+    <section class='contain full-height'>
+        <header class='pin-topright z10 pad2 animate'>
+            <h1 class='strong inline dark-shadow title-link'>Bringing ally to Dar es Salaam</h1>
+            <strong class='tracked-routes col12 truncate'>Tracked routes <p class='route-count'></p></strong>
+            </div>
+        </header>
+        <div id='map' class='map dark'></div>
+        <div class='pin-bottomright z1000 attribution pad1x pad0y dark small dark-shadow animate'>
+            <span class='attribution'>Data &copy; <a href='http://osm.org/about/' target='_blank'>OpenStreetMap</a> contributors</span>
+        </div>
+    </section>
+    <script src='data/bus_routes_unordered.geojson'></script>
+    <script src='map.js'></script>
+</body>
+
+</html>
